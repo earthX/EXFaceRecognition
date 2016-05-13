@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6hX-ky-ij8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--人脸识别Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3430277559670220261.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vf8-2i-Riw">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vf8-2i-Riw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7cE-Rf-oJ6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vf8-2i-Riw" secondAttribute="bottom" id="ebY-Tn-vbf"/>
+                            <constraint firstAttribute="trailing" secondItem="Vf8-2i-Riw" secondAttribute="trailing" id="mHG-wi-3cK"/>
+                            <constraint firstItem="Vf8-2i-Riw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tib-M4-9wD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="人脸识别Demo" id="nGm-wS-DPF">
+                        <barButtonItem key="leftBarButtonItem" title="选择图片" id="AxG-Rf-NEL">
+                            <connections>
+                                <action selector="Image:" destination="BYZ-38-t0r" id="nMZ-lc-Kfj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="人脸识别" id="uOB-HM-iTQ">
+                            <connections>
+                                <action selector="Recognise:" destination="BYZ-38-t0r" id="oeC-Il-DZq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageview" destination="Vf8-2i-Riw" id="viz-hS-I20"/>
+                        <outlet property="leftbutton" destination="AxG-Rf-NEL" id="TtR-ju-fQD"/>
+                        <outlet property="rightbutton" destination="uOB-HM-iTQ" id="pxw-Uc-wM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="703"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j2Y-my-ThW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6hX-ky-ij8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9g-Lr-QtR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SCg-eV-Yo9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nza-nP-6HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184" y="703"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3430277559670220261.jpg" width="416" height="572"/>
+    </resources>
+</document>
